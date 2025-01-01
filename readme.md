@@ -4,14 +4,6 @@ balefire is a minimal boilerplate theme for WordPress using [TailwindCSS Version
 
 ## Getting started
 
-### Using the installer
-
-This theme uses the ESBuild version of balefire-tailwind.
-
-Once your theme is ready, don't forget to cd into the directory.
-
-You will be asked if you would like to have WordPress installed as well. Keep in mind that you still need a local development environment for PHP and MySQL.
-
 ### Regular method
 
 * Clone repo `git clone git@github.com:nusserstudios/balefire-tailwind.git && cd balefire`
