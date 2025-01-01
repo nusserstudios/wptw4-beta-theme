@@ -26,9 +26,9 @@ You will be asked if you would like to have WordPress installed as well. Keep in
 
 Production files are located in the `/dist` folder.
 
-You will find the editable CSS and Javascript files within the `/assets` folder. SRC is where the build files are output to, if you change these, then the when you run `bun build` these files are recompiled, and your changes will be overwritten.
+You will find the editable CSS and Javascript files within the `/src` folder. SRC is where the build files are output to, if you change these, then the when you run `pnpm build` these files are recompiled, and your changes will be overwritten.
 
-Before you use your theme in production, make sure you run `bun build`.
+Before you use your theme in production, make sure you run `pnpm production`.
 
 ## NPM Scripts
 
