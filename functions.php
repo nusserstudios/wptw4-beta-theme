@@ -1,34 +1,47 @@
 <?php
-// Making jQuery to load from Google Library
-function replace_jquery() {
-    if (!is_admin()) {
-        // comment out the next two lines to load the local copy of jQuery
-        wp_deregister_script('jquery');
-        wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', false, '1.11.3');
-        wp_enqueue_script('jquery');
-        wp_enqueue_script('jquery-migrate');
-    }
-}
-add_action('init', 'replace_jquery');
-
-/**
- * Get the asset path.
+/** 
+ * For more info: https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @param string $path Path to asset.
- * @return string
- */
-function tw_beta_asset($path) {
-    return get_template_directory_uri() . $path;
-}
+ */			
+	
+// Customize the WordPress admin
+require_once(get_template_directory().'/functions/acf.php');
+	
+// Customize the WordPress admin
+require_once(get_template_directory().'/functions/admin.php');
 
-/**
- * Enqueue theme assets.
- */
-function tw_beta_enqueue_scripts() {
-    $theme = wp_get_theme();
-    wp_enqueue_style('tw-beta', tw_beta_asset('/dist/css/app.css'), array(), $theme->get('Version'));
-    wp_enqueue_script('tw-beta', tw_beta_asset('/dist/js/app.js'), array('jquery'), $theme->get('Version'), true);
-}
+// WP Head and other cleanup functions  
+require_once(get_template_directory().'/functions/cleanup.php');
 
-add_action('wp_enqueue_scripts', 'tw_beta_enqueue_scripts');
+// Makes WordPress comments suck less
+require_once(get_template_directory().'/functions/comments.php');
 
+// Use this as a template for custom post types
+require_once(get_template_directory().'/functions/custom-post-type.php');
+
+// Remove Emoji Support
+require_once(get_template_directory().'/functions/disable-emoji.php');
+
+// Register scripts and stylesheets
+require_once(get_template_directory().'/functions/enqueue-scripts.php');
+
+// Customize the WordPress login menu
+require_once(get_template_directory().'/functions/login.php');
+
+// Register custom menus and menu walkers
+require_once(get_template_directory().'/functions/menu.php');
+
+// Replace 'older/newer' post links with numbered navigation
+require_once(get_template_directory().'/functions/page-navi.php');
+
+// Related post function - no need to rely on plugins
+require_once(get_template_directory().'/functions/related-posts.php');
+
+// Register sidebars/widget areas
+require_once(get_template_directory().'/functions/sidebar.php');
+
+// Theme support options
+require_once(get_template_directory().'/functions/theme-support.php');
+
+// Adds support for multiple languages
+require_once(get_template_directory().'/functions/translation/translation.php');

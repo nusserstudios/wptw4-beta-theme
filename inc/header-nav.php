@@ -1,12 +1,12 @@
 <header>
 	<div class="bg-white border-gray-200 dark:bg-neutral-900 dark:border-gray-700">
-		<div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 py-4 mx-auto xl:px-0">
+		<div class="flex flex-wrap justify-between items-center px-4 py-4 mx-auto max-w-screen-xl xl:px-0">
 			<a href="<?php echo home_url(); ?>" class="flex items-center space-x-3 rtl:space-x-reverse">
 				<svg
 				id="bma-logo"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 164 38"
-				class="w-full h-auto text-black max-h-14 dark:text-white"
+				class="w-full h-auto max-h-14 text-black dark:text-white"
 				>
 					<g id="balefire-text">
 						<path
@@ -140,19 +140,19 @@
 					</g>
 				</svg>
 			</a>
-			<div class="flex items-center items-end ml-auto">
+			<div class="flex items-end items-center ml-auto align-center">
 				<nav id="nav-main" class="hidden w-auto">
 					<?php balefire_top_nav(); ?>
 				</nav>
-				<button id="theme-toggle" type="button" class="relative p-2 text-sm rounded-lg text-zinc-500 focus:outline-none w-9 h-9 md:ml-4 hover:text-primary">
-					<svg id="theme-toggle-dark-icon" class="absolute w-5 h-5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<button id="theme-toggle" type="button" class="relative p-2 my-auto w-12 h-12 text-sm rounded-lg text-zinc-500 focus:outline-none md:ml-4 hover:text-primary align-center">
+					<svg id="theme-toggle-dark-icon" class="absolute top-1/2 left-1/2 w-6 h-6 transform -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 						<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
 					</svg>
-					<svg id="theme-toggle-light-icon" class="absolute hidden w-5 h-5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<svg id="theme-toggle-light-icon" class="hidden absolute top-1/2 left-1/2 w-6 h-6 transform -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 						<path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
 					</svg>
 				</button>
-				<a id="mobile-menu" href="#main-nav" class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+				<a id="mobile-menu" href="#main-nav" class="inline-flex justify-center items-center p-2 my-auto w-10 h-10 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
 					<span class="sr-only">Open main menu</span>
 					<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
 						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>

@@ -404,17 +404,12 @@ body.mm-ocd-opened {
 
 /* Nav Main Styles */
 @media (min-width: 1025px) {
+    ul#main-nav.nav:first-of-type li {
+        @apply inline-flex px-2.5 py-4 m-auto text-zinc-900 dark:text-zinc-200;
+    }
+
     ul#main-nav.nav li {
         @apply inline-flex m-auto text-zinc-900 dark:text-zinc-200;
-    }
-    
-    ul#main-nav.nav > li > a {
-        @apply inline-flex p-3 m-auto text-zinc-900 dark:text-zinc-200;
-    }
-    
-    /* If you need different styles for submenu items */
-    ul#main-nav.nav li li a {
-        @apply text-zinc-700 dark:text-zinc-300;
     }
 
     #nav-main .nav li.menu-item-has-children {
@@ -441,17 +436,16 @@ body.mm-ocd-opened {
     }
 
     #nav-main .nav li.menu-item-has-children:hover ul li,
-    #nav-main .nav li.menu-item-has-children:hover ul li a,
     #nav-main .nav li.menu-item-has-children ul li.menu-item-has-children:hover ul li {
-        @apply w-full h-auto opacity-100 text-neutral-950 dark:text-neutral-100 hover:text-neutral-950 dark:hover:text-black;
+        @apply opacity-100 cursor-pointer text-neutral-950 dark:text-neutral-100 hover:text-neutral-950 dark:hover:text-black;
     }
 
     #nav-main .nav li.menu-item-has-children ul li {
-        @apply block;
+        @apply block border-b border-neutral-700/30;
     }
 
     #nav-main .nav li.menu-item-has-children ul li.menu-item-has-children ul {
-        @apply top-0 left-0 py-4;
+        @apply top-0 left-0;
     }
 
     #nav-main .nav li.menu-item-has-children ul li.menu-item-has-children:hover ul {
@@ -461,14 +455,4 @@ body.mm-ocd-opened {
     #nav-main {
         @apply inline-flex;
     }
-}
-
-/* First level menu items only */
-ul#main-nav.nav > li > a {
-    @apply inline-flex m-auto text-zinc-900 dark:text-zinc-200;
-}
-
-/* If you need different styles for submenu items */
-ul#main-nav.nav li li a {
-    @apply text-zinc-700 dark:text-zinc-300;
 }

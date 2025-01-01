@@ -16,8 +16,10 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'bg-zinc-100 h-screen' ); ?>>
+<body <?php body_class( 'bg-zinc-100 dark:bg-zinc-900 dark:text-zinc-100 text-zinc-900' ); ?>>
+
+<?php get_template_part( 'inc/header', 'nav' ); ?>
 
 <div id="page" class="flex">
 
-	<main class="mx-auto">
+	<main class="px-6 mx-auto mt-12 h-screen">

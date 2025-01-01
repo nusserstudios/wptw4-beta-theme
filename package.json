@@ -4,11 +4,12 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/css/main.css -o ./dist/css/app.css",
+    "build:css": "npx @tailwindcss/cli -i ./src/css/main.css -o ./dist/css/app.css",
     "watch": "npx @tailwindcss/cli -i ./src/css/main.css -o ./dist/css/app.css --watch",
     "build:js": "vite build",
+    "build": "npm run build:css",
+    "dev": "npm run watch:css",
     "production": "npm run build:css && npm run build:js",
-    "dev": "vite",
     "preview": "vite preview"
   },
   "author": "",

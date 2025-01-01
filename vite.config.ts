@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   build: {
     outDir: 'dist',
-    emptyOutDir: false,
     rollupOptions: {
       input: './src/js/app.js',
       output: {

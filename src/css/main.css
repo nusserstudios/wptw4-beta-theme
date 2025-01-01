@@ -1,9 +1,14 @@
 @import "tailwindcss";
+@import "./menu";
+@import "./custom";
 
-@theme {
-  /* Your theme customizations here */
+@layer theme, base, components, utilities;
+@variant dark (&:where(.dark, .dark *));
+:root {
+  --default: #faab45;
 }
 
+/* Custom styles */
 main p {
   @apply mb-4 text-lg;
 }

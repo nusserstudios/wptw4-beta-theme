@@ -9,36 +9,25 @@ function replace_jquery() {
         wp_enqueue_script('jquery-migrate');
     }
 }
-//add_action('init', 'replace_jquery');
+add_action('init', 'replace_jquery');
+
+/**
+ * Get the asset path.
+ *
+ * @param string $path Path to asset.
+ * @return string
+ */
+function tw_beta_asset($path) {
+    return get_template_directory_uri() . $path;
+}
 
 /**
  * Enqueue theme assets.
  */
-function balefire_enqueue_scripts() {
-	$theme = wp_get_theme();
-
-	wp_enqueue_style( 'balefire', balefire_asset( '/src/css/app.css' ), array(), $theme->get( 'Version' ) );
-	wp_enqueue_script( 'balefire', balefire_asset( '/src/js/app.js' ), array(), $theme->get( 'Version' ) );
+function tw_beta_enqueue_scripts() {
+    $theme = wp_get_theme();
+    wp_enqueue_style('tw-beta', tw_beta_asset('/dist/css/app.css'), array(), $theme->get('Version'));
+    wp_enqueue_script('tw-beta', tw_beta_asset('/dist/js/app.js'), array('jquery'), $theme->get('Version'), true);
 }
 
-add_action( 'wp_enqueue_scripts', 'balefire_enqueue_scripts' );
-
-/**
- * Register Block Patterns for Balefire Theme
- */
-function balefire_register_block_patterns() {
-    // Register pattern category if you want to group your patterns
-    if ( function_exists( 'register_block_pattern_category' ) ) {
-        register_block_pattern_category(
-            'balefire',
-            array( 'label' => __( 'Balefire', 'balefire' ) )
-        );
-    }
-}
-add_action( 'init', 'balefire_register_block_patterns' );
-
-add_action('init', function() {
-    error_log('Theme directory: ' . get_template_directory());
-    error_log('Patterns directory: ' . get_template_directory() . '/patterns');
-    error_log('Pattern file exists: ' . (file_exists(get_template_directory() . '/patterns/hero.php') ? 'yes' : 'no'));
-});
+add_action('wp_enqueue_scripts', 'tw_beta_enqueue_scripts');
