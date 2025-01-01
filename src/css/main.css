@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  /* Your theme customizations here */
+}
+
+main p {
+  @apply mb-4 text-lg;
+}
